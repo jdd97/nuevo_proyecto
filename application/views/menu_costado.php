@@ -4,7 +4,7 @@
     <a href="index3.html" class="brand-link">
       <img src="<?php echo base_url(); ?>dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">CH V1.0</span>
+      <span class="brand-text font-weight-light">SISTEMA DE VENTAS</span>
     </a>
 
     <!-- Sidebar -->
@@ -15,7 +15,7 @@
           <img src="<?php echo base_url(); ?>dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Ana Chilavert</a>
+          <a href="#" class="d-block">ComprasApp</a>
         </div>
       </div>
 

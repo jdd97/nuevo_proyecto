@@ -179,12 +179,12 @@
                         <?php if(!empty($clientes)):?>
                             <?php foreach($clientes as $cliente):?>
                                 <tr>
-                                    <td><?php echo $cliente->id;?></td>
-                                    <td><?php echo $cliente->nombre;?></td>
+                                    <td><?php echo $cliente->id_cliente;?></td>
+                                    <td><?php echo $cliente->razonsocial_cliente;?></td>
                                 
-                                    <td><?php echo $cliente->nrodocumento_cliente;?></td>
+                                    <td><?php echo $cliente->documento_cliente;?></td>
                               
-                                    <?php $datacliente = $cliente->id."*".$cliente->nombre."*".$cliente->tipocliente."*".$cliente->tipodocumento."*".$cliente->nrodocumento_cliente."*".$cliente->telefono."*".$cliente->direccion;?>
+                                    <?php $datacliente = $cliente->id_cliente."*".$cliente->razonsocial_cliente."*".$cliente->tipo_cliente."*".$cliente->tipodocumento."*".$cliente->documento_cliente."*".$cliente->telefono."*".$cliente->direccion;?>
                                     <td>
                                         <button type="button" class="btn btn-success btn-check" value="<?php echo $datacliente; ?>"><span class="fa fa-check"></span></button>
                                     </td>

@@ -10,7 +10,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>CH v1.0</title>
+  <title>ComprasApp</title>
 
   <!-- Font Awesome Icons -->
   <!--<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css"> -->

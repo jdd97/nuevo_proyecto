@@ -30,25 +30,25 @@
                                 <th>Razon Social</th>
                                 <th>nrodocumento</th>
                                 <th>direccion</th>
-                                <th>telefono</th>
+                               
                                 <th>opciones</th>
 
                             </tr>
                         </thead>
                         <tbody>
                 <?php if(!empty($clientes)):?>
-                                <?php foreach($clientes as $cliente):?>
+                                <?php foreach($clientes as $clientes):?>
                             <tr>
-                                <td><?php echo $cliente->id_cliente;?></td>
-                                <td><?php echo $cliente->razonsocial_cliente;?></td>
-                                <td><?php echo $cliente->nrodocumento_cliente;?></td>
-                                <td><?php echo $cliente->direccion_cliente;?></td>
-                                <td><?php echo $cliente->telefono_cliente;?></td>
+                                <td><?php echo $clientes->id_cliente;?></td>
+                                <td><?php echo $clientes->razonsocial_cliente;?></td>
+                                <td><?php echo $clientes->documento_cliente;?></td>
+                                <td><?php echo $clientes->direccion_cliente;?></td>
+                               
                                 <td>
                                     <div class="btn-group">
 
-                                        <a href="<?php echo base_url();?>Clientes/edit/<?php echo $cliente->id_cliente;?>"class="btn btn-warning"><span class="far fa-edit"></span></a>
-                                        <a href="<?php echo base_url(); ?>Clientes/delete/<?php echo $cliente->id_cliente; ?>"class="btn btn-danger btn-remove"><span class="fas fa-trash-alt"></span></a>
+                                        <a href="<?php echo base_url();?>Clientes/edit/<?php echo $clientes->id_cliente;?>"class="btn btn-warning"><span class="far fa-edit"></span></a>
+                                        <a href="<?php echo base_url(); ?>Clientes/delete/<?php echo $clientes->id_cliente; ?>"class="btn btn-danger btn-remove"><span class="fas fa-trash-alt"></span></a>
                                         
                                     </div>
                                 </td>

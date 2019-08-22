@@ -1,6 +1,10 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
+defined('BASEPATH') or exit('No direct script access allowed');
+date_default_timezone_set('America/Asuncion');
+//error_reporting(0);
+//ini_set('display_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
+/*
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -23,9 +27,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-//$config['base_url'] = 'http://localhost/Proyectos/Genesys-2';
-$config['base_url'] = 'http://localhost/Proyectos/ANA';
 
+$config['base_url'] = "http://" . $_SERVER['HTTP_HOST'];
+$config['base_url'] .= preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
+
+
+//$config['base_path'] = "/var/www/html/" . $_SERVER['DOCUMENT_ROOT'];
+// $config['base_path'] = "/var/www/html/";
+// $config['pdf_path'] = $config['base_path'];
+// $config['photo_url'] = $config['base_url'] . "assets/app/img/";
+// $config['photo_path'] = $config['base_path'] . "assets/app/img/";
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -36,7 +47,8 @@ $config['base_url'] = 'http://localhost/Proyectos/ANA';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+//$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +65,7 @@ $config['index_page'] = 'index.php';
 |
 | WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
 */
-$config['uri_protocol']	= 'REQUEST_URI';
+$config['uri_protocol']    = 'REQUEST_URI';
 
 /*
 |--------------------------------------------------------------------------
@@ -77,7 +89,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+$config['language']    = 'spanish';
 
 /*
 |--------------------------------------------------------------------------
@@ -401,11 +413,11 @@ $config['sess_regenerate_destroy'] = FALSE;
 |       'cookie_httponly') will also affect sessions.
 |
 */
-$config['cookie_prefix']	= '';
-$config['cookie_domain']	= '';
-$config['cookie_path']		= '/';
-$config['cookie_secure']	= FALSE;
-$config['cookie_httponly'] 	= FALSE;
+$config['cookie_prefix']    = '';
+$config['cookie_domain']    = '';
+$config['cookie_path']        = '/';
+$config['cookie_secure']    = FALSE;
+$config['cookie_httponly']     = FALSE;
 
 /*
 |--------------------------------------------------------------------------

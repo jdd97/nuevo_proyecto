@@ -2,11 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Ventas_model extends CI_Model {
-public function gettipo_comprobante(){
+/* public function gettipo_comprobante(){
     $resultados=$this-> db->get("tipo_comprobante");
-    return $resultados->result();
+    return $resultados->result(); 
+	} */
 	public function getVentas(){
-		$this->db->select("v.*, c.razonsocial_cliente, tc.nombre as tipo_comprobante");
+		$this->db->select("v.*, c.razonsocial_cliente, nombre as tipo_comprobante");
 		$this->db->from("ventas v");
 		$this->db->join("clientes c", "v.id_cliente = c.id_cliente");
 		$this->db->join("tipo_comprobante tc", "v.id_tipo_comprobante = tc.id_tipo_comprobante");
@@ -19,6 +20,7 @@ public function gettipo_comprobante(){
 			return false;
 		}
 	}
+	
     
 
     public function getVentasbyDate($fechainicio, $fechafin){
@@ -64,7 +66,7 @@ public function gettipo_comprobante(){
         $resultados = $this->db->get("tipo_comprobante");
         return $resultados->result();
     }
-
+ 
     
 
     public function getTipo_comprobante($idcomprobante){
@@ -75,14 +77,15 @@ public function gettipo_comprobante(){
 
     }
 
-    public function getproductos($valor){
+    public function getproductos($valor){ 
+
         $this->db->select("id_producto, codigo_producto, nombre as label, precio_compra, precio_venta, stock_minimo,stok");
         $this->db->from("productos");
         $this->db->like("nombre", $valor);
         $resultados = $this->db->get();
         return $resultados->result_array();
     }
-
+	
     public function save($data){
     	return $this->db->insert("ventas", $data);
     }
